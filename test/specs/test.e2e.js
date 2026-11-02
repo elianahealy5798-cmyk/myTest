@@ -6,7 +6,7 @@ describe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await LoginPage.open()
 
-        await LoginPage.login('standard_user', 'secret_sauce') // changed login names
+        await LoginPage.login(LoginPage.username, LoginPage.password) 
         await browser.url('https://www.saucedemo.com/inventory.html')
         await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
     })
