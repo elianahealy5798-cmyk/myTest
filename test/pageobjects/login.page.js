@@ -32,7 +32,7 @@ class LoginPage extends Page {
         await this.btnSubmit.click();
         
     }
-    username = ('standard_user')
+    username = ['standard_user', 'problem_user', 'error_user', 'visual_user']
     password = ('secret_sauce')
     /**
      * overwrite specific options to adapt it to page object

@@ -4,11 +4,13 @@ import SecurePage from '../pageobjects/secure.page.js'
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
-        await LoginPage.open()
+        for (const username of LoginPage.username) {
+            await LoginPage.open()
 
-        await LoginPage.login(LoginPage.username, LoginPage.password) 
-        await browser.url('https://www.saucedemo.com/inventory.html')
-        await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+            await LoginPage.login(username, LoginPage.password) 
+            await browser.url('https://www.saucedemo.com/inventory.html')
+            await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
+    }
     })
 })
 
