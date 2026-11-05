@@ -20,7 +20,10 @@ class LoginPage extends Page {
         return $('input[type="submit"]'); // changed button to input
     }
 
-    
+    credentials = {
+        users: ['standard_user', 'problem_user', 'error_user', 'visual_user'],
+        password: 'secret_sauce'
+    };
 
     /**
      * a method to encapsule automation code to interact with the page
@@ -32,8 +35,7 @@ class LoginPage extends Page {
         await this.btnSubmit.click();
         
     }
-    username = ['standard_user', 'problem_user', 'error_user', 'visual_user']
-    password = ('secret_sauce')
+    
     /**
      * overwrite specific options to adapt it to page object
      */
